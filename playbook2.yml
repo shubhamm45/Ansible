@@ -2,7 +2,7 @@
 - name: This sets up an httpd webserver
   hosts: aws_ec2
 vars:
-    ansible_ssh_private_key_file: "/etc/ansible/ansible.pem"
+  ansible_ssh_private_key_file: "/etc/ansible/ansible.pem"
   become: yes
   remote_user: ec2-user
   gather_facts: true
