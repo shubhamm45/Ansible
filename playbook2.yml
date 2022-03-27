@@ -7,15 +7,15 @@ vars:
   remote_user: ec2-user
   gather_facts: true
   tasks:
-- name: Installing httpd software
+    - name: Installing httpd software
         package:
                 name: "httpd"
                 state: present
-- name: Copying webpage
+    - name: Copying webpage
         copy:
                 src: home.html
                 dest: /var/www/html/
-- name: Starting httpd services
+    - name: Starting httpd services
         service:
                 name: "httpd"
                 state: started
